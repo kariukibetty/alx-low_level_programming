@@ -6,6 +6,6 @@
 */
 int main(void)
 {
-printf("wish proper grammar, but the outcome is piece of art,/n");
+printf("with proper grammar, but the outcome is piece of art,\n");
 return (0);
 }
