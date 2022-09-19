@@ -1,25 +1,42 @@
 #include "main.h"
 
 /**
- *puts_half - prints half of the string
- *@str: string being tested
+ *rev_string - reverses a string
+ *@s: string being reversed
  */
 
-void puts_half(char *str)
+void rev_string(char *s)
 {
-int count, e, n;
+int a, c;
+char *begin, *end, temp;
 
-for (count = 0; str[count] != '\0'; count++)
-;
-if ((count % 2) == 0)
+a = str_len(s);
+begin = end = s;
+
+for (c = 0; c < a - 1; c++)
+end++;
+for (c = 0; c < a / 2; c++)
 {
-for (e = count / 2; str[e] != '\0'; e++)
-_putchar(str[e]);
+temp = *end;
+*end = *begin;
+*begin = temp;
+
+begin++;
+end--;
 }
-else
+}
+
+/**
+ *str_len - calculates length of a string
+ *@pointer: points to the address of the string
+ *Return: Always 0.
+ */
+
+int str_len(char *pointer)
 {
-for (n = (count / 2) + 1; str[n] != '\0'; n++)
-_putchar(str[n]);
-}
-_putchar('\n');
+int c = 0;
+
+while (*(pointer + c) != '\0')
+c++;
+return (c);
 }
