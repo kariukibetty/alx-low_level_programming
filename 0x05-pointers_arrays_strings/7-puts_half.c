@@ -3,24 +3,23 @@
 /**
  *puts_half - prints half of the string
  *@str: string being tested
- *
  */
 
 void puts_half(char *str)
 {
-int ct, even, neg;
+int count, e, n;
 
-for (ct = 0; str[ct] != '\0'; ct++)
+for (count = 0; str[count] != '\0'; count++)
 ;
-if ((ct % 2) == 0)
+if ((count % 2) == 0)
 {
-for (even = ct / 2; str[even] != '\0'; even++)
-_putchar(str[even]);
+for (e = count / 2; str[e] != '\0'; e++)
+_putchar(str[e]);
 }
 else
 {
-for (neg = (ct - 1) / 2; str[neg] != '\0'; neg++)
-_putchar(str[neg + 1]);
+for (n = (count / 2) + 1; str[n] != '\0'; n++)
+_putchar(str[n]);
 }
 _putchar('\n');
 }
