@@ -16,14 +16,14 @@ i = 0;
 
 if (size == 0)
 {
-return ('\0');
+return (NULL);
 }
 else
 {
 array = malloc(sizeof(char) * size);
-if (array == '\0')
+if (array == NULL)
 {
-return ('\0');
+return (NULL);
 }
 else
 {
