@@ -6,36 +6,45 @@
  *@s1: first string
  *@s2: second string
  *Desc:  a function that concatenates two strings
+ *
  *Return: NULL on failure
  */
-
 char *str_concat(char *s1, char *s2)
 {
-unsigned int i, j, k, l;
 char *s;
+int x = 0, y = 0, len = 0;
 
 if (s1 == NULL)
-i = 0;
-else
+s1 = "";
+if (s2 == NULL
+s2 = "";
+
+while (s1[x])
 {
-for (i = 0; s1[i]; i++)
-;
+len++;
+x++;
 }
-if (s2 == NULL)
-j = 0
-else
+x = 0;
+while (s2[x])
 {
-for (j = 0; s2[j]; j++)
-;
+len++;
+x++;
 }
-k = i + j + 1;
-s = malloc(k *sizeof(char));
+s = malloc(sizeof(char) * (len + 1));
 if (s == NULL)
 return (NULL);
-for (l = 0; l < i; l++)
-s[l] = s1[l];
-for (l = 0; l < j; l++)
-s[l + i] = s2[l];
-s[i + j] = '\0';
+x = 0;
+while (s1[x])
+{
+s[x] = s1[x];
+x++;
+}
+while (s2[y])
+{
+s[x] = s2[y];
+x++, y++;
+}
+s[x] = '\0';
+
 return (s);
 }
