@@ -10,7 +10,7 @@
  */
 
 void free_grid(int **grid, int height)
-{
+
 int x;
 
 x = 0;
