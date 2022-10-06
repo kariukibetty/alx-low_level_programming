@@ -39,7 +39,7 @@ return (NULL);
 }
 x++;
 }
-x = 0
+x = 0;
 while (x < height)
 {
 y = 0;
