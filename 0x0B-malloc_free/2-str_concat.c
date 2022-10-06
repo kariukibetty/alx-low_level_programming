@@ -16,7 +16,7 @@ int x = 0, y = 0, len = 0;
 
 if (s1 == NULL)
 s1 = "";
-if (s2 == NULL
+if (s2 == NULL)
 s2 = "";
 
 while (s1[x])
