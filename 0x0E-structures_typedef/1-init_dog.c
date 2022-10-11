@@ -1,11 +1,10 @@
 #include <stdlib.h>
 #include "dog.h"
-
 /**
  *init_dog - main function
  *@d: the dog struct
  *@name: name of the dog
- *@age: age of the dog 
+ *@age: age of the dog
  *@owner: owner of the dog
  *Return: void
  */
